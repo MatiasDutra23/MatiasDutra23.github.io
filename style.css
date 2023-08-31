@@ -1,5 +1,7 @@
-/* fuente Poppins desde Google Fonts */
+/* Fuente Poppins desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Estilos globales */
 * {
     margin: 0;
     padding: 0;
@@ -8,30 +10,30 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
- font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Definición de variables personalizadas para colores,
-:root Es una pseudoclase en CSS que selecciona el elemento raíz del documento HTML*/
+/* Definición de variables personalizadas para colores */
 :root {
- --bg-color: #081b29;
- --second-bg-color: #112e42;
- --text-color: #ededed;
- --main-color: #00abf0;
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
 }
 
+/* Ajustes para el documento HTML */
 html {
-    font-size: 62.5%;
-    
-    /* Oculta cualquier desplazamiento horizontal (scroll) en el cuerpo del documento */
-    overflow-x: hidden;
+    font-size: 62.5%; /* 1rem equivale a 10px */
+    overflow-x: hidden; /* Oculta el desplazamiento horizontal */
 }
 
+/* Estilos globales para el cuerpo del documento */
 body {
     background: var(--bg-color);
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
+/* Estilos para la sección de encabezado */
 .header {
     position: fixed;
     top: 0;
@@ -45,12 +47,14 @@ body {
     z-index: 100;
 }
 
+/* Estilos para el logotipo */
 .logo {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
 }
 
+/* Estilos para los enlaces de navegación */
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
@@ -61,9 +65,10 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-color: var(--main-color);
+    color: var(--main-color);
 }
 
+/* Estilos para el ícono del menú */
 #menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
@@ -71,21 +76,24 @@ color: var(--main-color);
     display: none;
 }
 
+/* Estilos generales para secciones */
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
-.home   {
+/* Estilos para la sección de inicio */
+.home {
     display: flex;
     align-items: center;
     padding: 0 9%;
     background: url(img/fond2.png);
-    background-repeat:no-repeat;
-    background-size:60%;
+    background-repeat: no-repeat;
+    background-size: 60%;
     background-position: calc(100% - 12px) center;
 }
 
+/* Contenido de la sección de inicio */
 .home-content {
     max-width: 60rem;
 }
@@ -100,27 +108,30 @@ section {
     position: relative;
     width: 43.7rem;
 }
- .home-content .text-animate h3 {
+
+.home-content .text-animate h3 {
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
- }
+}
 
- .home-content p {
+.home-content p {
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
- }
+}
 
- .btn-box {
+/* Estilos para el contenedor de botones */
+.btn-box {
     position: relative;
     display: flex;
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
- }
+}
 
- .btn-box .btn {
+/* Estilos para los botones */
+.btn-box .btn {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -137,27 +148,28 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
- }
+}
 
- .btn-box .btn:hover {
+.btn-box .btn:hover {
     color: var(--main-color);
- }
+}
 
+/* Estilos para el segundo botón */
+.btn-box .btn:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
 
- .btn-box .btn:nth-child(2) {
-background: transparent;
-color: var(--main-color);
- }
-
- .btn-box .btn:nth-child(2):hover {
+.btn-box .btn:nth-child(2):hover {
     color: var(--bg-color);
- }
+}
 
- .btn-box .btn:nth-child(2)::before {
+.btn-box .btn:nth-child(2)::before {
     background: var(--main-color);
- }
+}
 
- .btn-box .btn::before {
+/* Efecto de fondo antes de hover en botones */
+.btn-box .btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -167,42 +179,44 @@ color: var(--main-color);
     background: var(--bg-color);
     z-index: -1;
     transition: .5s;
- }
- 
- .btn-box .btn:hover::before {
-    width: 100%;
- }
+}
 
- .home-sci {
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+/* Estilos para la sección de redes sociales en la parte inferior */
+.home-sci {
     position: absolute;
     bottom: 4rem;
     width: 100px;
     display: flex;
     justify-content: space-between;
- }
+}
 
- .home-sci a{
-position: relative;
-display: inline-flex;
-justify-content: center;
-align-items: center;
-width: 40px;
-height: 40px;
-background: transparent;
-border: .2rem solid var(--main-color);
-border-radius: 50%;
-font-size: 20px;
-color: var(--main-color);
-z-index: 1;
-overflow: hidden;
-transition: .5s;
- }
+/* Estilos para los enlaces de redes sociales */
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
 
- .home-sci a:hover {
+.home-sci a:hover {
     color: var(--bg-color);
- }
+}
 
- .home-sci a::before {
+.home-sci a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -212,8 +226,8 @@ transition: .5s;
     background: var(--main-color);
     z-index: -1;
     transition: .5s;
- }
+}
 
- .home-sci a:hover::before {
-width: 100%;
- }
+.home-sci a:hover::before {
+    width: 100%;
+}
